@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Debug",
+            "gdbpath": "/Users/alxs/Development/Workspaces/espressif/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
+            "type": "gdb",
+            "request": "attach",
+            "executable" : "${workspaceRoot}/build/gcc-tutorial.elf",
+            "target": "/dev/tty.SLAB_USBtoUART",
+            "remote": true,
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}

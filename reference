@@ -1,0 +1,112 @@
+Calibration
+T1 = {uint16_t} 27958
+T2 = {int16_t} 26133
+T3 = {int16_t} 50
+
+P1 = {uint16_t} 37458
+P2 = {int16_t} -11022
+P3 = {int16_t} 3024
+P4 = {int16_t} 7566
+P5 = {int16_t} -168
+P6 = {int16_t} -7
+P7 = {int16_t} 9900
+P8 = {int16_t} -10230
+P9 = {int16_t} 4285
+
+H1 = {uint8_t} 75
+H2 = {int16_t} 357
+H3 = {uint8_t} 0
+H4 = {int16_t} 331
+H5 = {int16_t} 0
+H6 = {int8_t} 30
+
+
+D (1389) bme280: T1: 27958, T2: 26133, T3: 50
+D (1389) bme280: P1: 37458, P2: -11022, P3: 3024, P4: 7566, P5: -168, P6: -7, P7: 9900, P8: -10230, P9: 4285
+
+
+
+Temp:
+adc_T = 8414784
+adc_T >> 4 = 525924
+var1 = 125356
+var2 = 17
+fine_t = 125373
+T = 2449
+result = 24.49
+
+Humidity:
+t_fine = 125284
+adc_H = 31718
+v_x1_u32r = 48484
+v_x1_u32r = 245895162
+v_x1_u32r = 243833028
+v_x1_u32r = 243833028
+v_x1_u32r = 243833028
+h = 59529
+result = 58.1337891
+
+Pressure
+t_fine = 125207
+adc_P = 5250784
+adc_P >> 4 = 328174
+var1 = -2793
+var2 = -54605943
+var2 = 61447522185
+var2 = 260027228014473
+var1 = 126185238344
+var1 = 614262126
+p = 720402
+p = 6547613350
+var1 = 81580595
+var2 = -127758188
+p = 25554633
+result = 99822.7812
+
+
+
+
+
+
+dig_T1 = {uint16_t} 27958
+dig_T2 = {int16_t} 26133
+dig_T3 = {int16_t} 50
+dig_P1 = {uint16_t} 37458
+dig_P2 = {int16_t} -11022
+dig_P3 = {int16_t} 3024
+dig_P4 = {int16_t} 7566
+dig_P5 = {int16_t} -168
+dig_P6 = {int16_t} -7
+dig_P7 = {int16_t} 9900
+dig_P8 = {int16_t} -10230
+dig_P9 = {int16_t} 4285
+dig_H1 = {uint8_t} 75 'K'
+dig_H2 = {int16_t} 357
+dig_H3 = {uint8_t} 0 '\000'
+dig_H4 = {int16_t} 331
+dig_H5 = {int16_t} 0
+dig_H6 = {int8_t} 30 '\036'
+
+
+
+
+dig_T1 = {uint16_t} 27958
+dig_T2 = {int16_t} 26133
+dig_T3 = {int16_t} 50
+dig_P1 = {uint16_t} 37458
+dig_P2 = {int16_t} -11022
+dig_P3 = {int16_t} 3024
+dig_P4 = {int16_t} 7566
+dig_P5 = {int16_t} -168
+dig_P6 = {int16_t} -7
+dig_P7 = {int16_t} 9900
+dig_P8 = {int16_t} -10230
+dig_P9 = {int16_t} 4285
+dig_H1 = {uint8_t} 75 'K'
+dig_H2 = {int16_t} 357
+dig_H3 = {uint8_t} 0 '\000'
+dig_H4 = {int16_t} 331
+dig_H5 = {int16_t} 0
+dig_H6 = {int8_t} 30 '\036'
+
+
