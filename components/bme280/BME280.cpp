@@ -113,10 +113,10 @@ bme280_adc_data BME280::burstReadMeasurement() {
 
     bme280_adc_data adc_data;
 
-    adc_data.buffer.preassure.xmsb = 0;
-    adc_data.buffer.preassure.msb = buffer[0];
-    adc_data.buffer.preassure.lsb = buffer[1];
-    adc_data.buffer.preassure.xlsb = buffer[2];
+    adc_data.buffer.pressure.xmsb = 0;
+    adc_data.buffer.pressure.msb = buffer[0];
+    adc_data.buffer.pressure.lsb = buffer[1];
+    adc_data.buffer.pressure.xlsb = buffer[2];
 
     adc_data.buffer.temperature.xmsb = 0;
     adc_data.buffer.temperature.msb = buffer[3];
@@ -226,12 +226,12 @@ float BME280::convertUncompensatedHumidity(BME280_S32_t adc_H) {
 /*!
 Calculates the altitude (in meters) from the specified atmospheric
 pressure (in hPa), and sea-level pressure (in hPa).
-@param  preassure     preassure in Pa
+@param  pressure     preassure in Pa
 @param  seaLevel      Sea-level pressure in hPa
 @param  atmospheric   Atmospheric pressure in hPa
 */
 /**************************************************************************/
-float BME280::altitudeOfPreassure(float preassure, float seaLevel) {
+float BME280::altitudeOfPressure(float pressure, float seaLevel) {
     // Equation taken from BMP180 datasheet (page 16):
     //  http://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf
 
@@ -239,7 +239,7 @@ float BME280::altitudeOfPreassure(float preassure, float seaLevel) {
     // at high altitude.  See this thread for more information:
     //  http://forums.adafruit.com/viewtopic.php?f=22&t=58064
 
-    float atmospheric = preassure / 100.0F;
+    float atmospheric = pressure / 100.0F;
     return 44330.0 * (1.0 - pow((double) atmospheric / seaLevel, (double) 0.1903));
 }
 
@@ -271,7 +271,7 @@ bme280_reading_data BME280::readSensorData() {
     bme280_adc_data adc_data = burstReadMeasurement();
 
     reading_data.temperature = convertUncompensatedTemperature(adc_data.adc_data.adc_T);
-    reading_data.preassure = convertUncompensatedPressure(adc_data.adc_data.adc_P);
+    reading_data.pressure = convertUncompensatedPressure(adc_data.adc_data.adc_P);
     reading_data.humidity = convertUncompensatedHumidity(adc_data.adc_data.adc_H);
 
     return reading_data;

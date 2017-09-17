@@ -1,9 +1,6 @@
 
 #include "MeasureTask.h"
 
-#include <esp_log.h>
-#include <FreeRTOS.h>
-#include <string>
 #include <BME280.h>
 
 
@@ -18,7 +15,7 @@ void MeasureTask::run(void *data) {
         printf("Temperature: %.2foC, Humidity: %.2f%%, Pressure: %.2fPa\n",
                (double) sensor_data.temperature,
                (double) sensor_data.humidity,
-               (double) sensor_data.preassure
+               (double) sensor_data.pressure
         );
 
         vTaskDelay(1000 / portTICK_PERIOD_MS);

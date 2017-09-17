@@ -93,7 +93,7 @@ typedef struct
 {
     float temperature;
     float humidity;
-    float preassure;
+    float pressure;
 } bme280_reading_data;
 
 union bme280_adc_data
@@ -109,7 +109,7 @@ union bme280_adc_data
             uint8_t lsb;
             uint8_t msb;
             uint8_t xmsb;
-        } preassure;
+        } pressure;
         struct {
             uint8_t xlsb;
             uint8_t lsb;
@@ -139,7 +139,7 @@ public:
 	void setDebug(bool enabled);
 	esp_err_t init(gpio_num_t sdaPin=I2C::DEFAULT_SDA_PIN, gpio_num_t clkPin=I2C::DEFAULT_CLK_PIN);
 
-    float altitudeOfPreassure(float preassure, float seaLevel);
+    float altitudeOfPressure(float pressure, float seaLevel);
     float seaLevelForAltitude(float altitude, float atmospheric);
     bme280_reading_data readSensorData();
 
